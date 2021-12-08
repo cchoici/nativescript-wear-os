@@ -8,6 +8,7 @@ import {
 
 export class WearOsLayout extends ContentView implements AddChildFromBuilder {
   disableInsetConstraint: boolean = false;
+  contentInset: string = "1,1,1,1"; // l, t, r, b
   private _android: android.widget.LinearLayout;
   private _androidViewId: number;
   private _content: View;
@@ -41,7 +42,8 @@ export class WearOsLayout extends ContentView implements AddChildFromBuilder {
       // Check for inset here and if we have it apply the default padding for circle watches
       const inset = this._adjustInset();
       if (inset) {
-        this._android.setPadding(inset, inset, inset, inset);
+        const ltrb = this.contentInset.split(',').map(isInset => isInset === '1' ? inset : 0);
+        this._android.setPadding(ltrb[0], ltrb[1], ltrb[2], ltrb[3]);
       }
     }
 

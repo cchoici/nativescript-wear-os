@@ -1,6 +1,7 @@
 import { AddChildFromBuilder, ContentView, View } from '@nativescript/core';
 export declare class WearOsLayout extends ContentView implements AddChildFromBuilder {
     disableInsetConstraint: boolean;
+    contentInset: string;
     private _android;
     private _androidViewId;
     private _content;

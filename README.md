@@ -7,17 +7,21 @@ NativeScript-Wear-OS is a NativeScript plugin that provides layouts and utilitie
 
 <p align="center">
   <a href="https://www.npmjs.com/package/nativescript-gif">
-        <img src="https://github.com/bradmartin/nativescript-wear-os/workflows/Build%20CI/badge.svg" alt="Action Build">
+        <img src="https://github.com/@cchoici/nativescript-wear-os/workflows/Build%20CI/badge.svg" alt="Action Build">
     </a>
     <a href="https://www.npmjs.com/package/nativescript-wear-os">
-        <img src="https://img.shields.io/npm/v/nativescript-wear-os.svg" alt="npm">
+        <img src="https://img.shields.io/npm/v/@cchoici/nativescript-wear-os.svg" alt="npm">
     </a>
     <a href="https://www.npmjs.com/package/nativescript-wear-os">
-        <img src="https://img.shields.io/npm/dt/nativescript-wear-os.svg?label=npm%20downloads" alt="npm">
+        <img src="https://img.shields.io/npm/dt/@cchoici/nativescript-wear-os.svg?label=npm%20downloads" alt="npm">
     </a>
 </p>
 
 ---
+
+## Note
+
+Add **contentInset** to set paddings place, default is "1,1,1,1" (left, top, right, bottom)
 
 ## Installation
 
@@ -60,7 +64,7 @@ tns plugin add nativescript-wear-os@2.1.1
 const appComponents = [
   '@nativescript/core/ui/frame',
   '@nativescript/core/ui/frame/activity',
-  resolve(__dirname, 'app/ambient-activity'),
+  resolve(__dirname, 'app/ambient-activity')
 ];
 ```
 
@@ -158,7 +162,7 @@ The plugin has a success dialog and failure/error dialog to present on WearOS. T
 ```typescript
 import {
   showFailure,
-  showSuccess,
+  showSuccess
 } from 'nativescript-wear-os/packages/dialogs';
 
 showSuccess('Great choice! NativeScript is awesome.', 4).then(() => {
